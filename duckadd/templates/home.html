@@ -1,0 +1,11 @@
+<h1>Blog Post</h1>
+<a href="{% url 'add_post' %}"> Add Post </a>
+<ul>
+{% for post in object_list %}
+    <li><a href=""> {{ post.title }}</a><br>
+    {{ post.describtion}}<br>
+    {{ post.date}}<br>
+    {{ post.done}} - - - - - -<a href="{% url 'update_post' post.pk%}">(Edit)</a>
+    <a href="{% url 'delate_post' post.pk%}">(Delate)</a></li>
+{% endfor%}
+</ul>

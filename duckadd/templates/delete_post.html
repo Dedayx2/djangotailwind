@@ -1,0 +1,10 @@
+<h1> Delate Post</h1>
+
+<h3> {{ post.title }}</h3>
+
+
+<form method="POST">
+    {% csrf_token %}
+    <strong> Delate </strong>
+    <button> Delate Post! </button>
+</form>
